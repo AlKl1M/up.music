@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS up_music_music;
+DROP TABLE IF EXISTS up_music_genre;
+DELETE fROM b_user WHERE ID != 1;
+DELETE fROM b_user_password WHERE ID != 1;
+DELETE fROM b_user_option WHERE USER_ID NOT IN (0, 1);
+DELETE fROM b_user_index WHERE USER_ID != 1;
+DELETE fROM b_user_group WHERE USER_ID != 1;
+DELETE fROM b_user_auth_action WHERE USER_ID != 1;
+DELETE fROM b_user_access WHERE USER_ID NOT IN (0, 1);
+TRUNCATE TABLE b_file;
+TRUNCATE TABLE b_file_hash;
+TRUNCATE TABLE b_file_duplicate;
